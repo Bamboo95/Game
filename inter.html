@@ -4,40 +4,61 @@
 	<title>Wait for it…</title>
 	<meta charset="utf-8">
 	<!-- <meta http-equiv=refresh content="3; URL=https://addons.opera.com/en/extensions/details/worlds-most-useless-extension/"> -->
-	<script>
-		// setTimeout(function() {
-		// 	location.href = 'https://addons.opera.com/en/extensions/details/worlds-most-useless-extension/';
-		// }, 3000);
-	</script>
 	<style>
-		body {
+		html, body {
+			overflow:hidden;
 			background:#2B303B;
 			}
+		/* Button */
 		.button {
 			position:absolute;
-			top:50%;
+			top:45%;
 			left:50%;
 			margin:-100px 0 0 -290px;
 			width:580px;
 			height:200px;
-			border:none;
+			border:10px solid #323A43;
 			border-radius:40px;
 			background:#090;
+			background:linear-gradient(#28BD00, #21A100);
 			color:#FFF;
-			font-size:100px;
+			font:100px/1 sans-serif;
 			}
+		.loaded .button {
+			/*-webkit-animation:press 0.5s linear 1s forwards;*/
+			}
+		@-webkit-keyframes press {
+			from { margin-top:-100px }
+			to { margin-top:-90px }
+			}
+		/* Hand */
 		.hand {
 			position:absolute;
-			top:50%;
+			top:120%;
 			left:50%;
-			margin:20px 0 0 -85px;
+			margin:-20px 0 0 -85px;
 			width:170px;
 			height:220px;
+			}
+		.loaded .hand {
+			-webkit-animation:move ease-out 1s forwards;
+			}
+		@-webkit-keyframes move {
+			from { top:120% }
+			to { top:45% }
 			}
 	</style>
 </head>
 <body>
 	<button class="button">Uninstall</button>
-	<img src="hand.gif" alt="" class="hand">
+	<img class="hand" src="hand.gif">
+	<script>
+		window.addEventListener('load', function (e) {
+			document.body.className = 'loaded';
+		}, false);
+		// setTimeout(function() {
+		// 	location.href = 'https://addons.opera.com/en/extensions/details/worlds-most-useless-extension/';
+		// }, 3000);
+	</script>
 </body>
 </html>
