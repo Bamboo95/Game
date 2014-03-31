@@ -20,32 +20,40 @@
 			border:10px solid #323A43;
 			border-radius:40px;
 			background:#090;
-			background:linear-gradient(#28BD00, #21A100);
+			background:linear-gradient(#28BD00, #177500);
 			color:#FFF;
 			font:100px/1 sans-serif;
 			}
 		.loaded .button {
-			/*-webkit-animation:press 0.5s linear 1s forwards;*/
+			-webkit-animation:press 0.5s 0.6s 1 linear forwards;
 			}
 		@-webkit-keyframes press {
-			from { margin-top:-100px }
-			to { margin-top:-90px }
+			99% {
+				background:linear-gradient(#28BD00, #177500);
+				margin-top:-100px;
+				}
+			100% {
+				margin-top:-90px;
+				background:#181B21;
+				}
 			}
 		/* Hand */
 		.hand {
 			position:absolute;
 			top:120%;
 			left:50%;
-			margin:-20px 0 0 -85px;
+			margin:-40px 0 0 -85px;
 			width:170px;
 			height:220px;
 			}
 		.loaded .hand {
-			-webkit-animation:move ease-out 1s forwards;
+			-webkit-animation:move 1.5s ease-out forwards;
 			}
 		@-webkit-keyframes move {
-			from { top:120% }
-			to { top:45% }
+			0 { top:120% }
+			55% { top:45% }
+			85% { top:45% }
+			100% { top:62% }
 			}
 	</style>
 </head>
