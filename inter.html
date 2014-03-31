@@ -1,9 +1,43 @@
 <!DOCTYPE html>
-<meta charset=utf-8>
-<title>Wait for it…</title>
-<meta http-equiv=refresh content="3; URL=https://addons.opera.com/en/extensions/details/worlds-most-useless-extension/">
-<script>
-	setTimeout(function() {
-		location.href = 'https://addons.opera.com/en/extensions/details/worlds-most-useless-extension/';
-	}, 3000);
-</script>
+<html>
+<head>
+	<title>Wait for it…</title>
+	<meta charset="utf-8">
+	<!-- <meta http-equiv=refresh content="3; URL=https://addons.opera.com/en/extensions/details/worlds-most-useless-extension/"> -->
+	<script>
+		// setTimeout(function() {
+		// 	location.href = 'https://addons.opera.com/en/extensions/details/worlds-most-useless-extension/';
+		// }, 3000);
+	</script>
+	<style>
+		body {
+			background:#2B303B;
+			}
+		.button {
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin:-100px 0 0 -290px;
+			width:580px;
+			height:200px;
+			border:none;
+			border-radius:40px;
+			background:#090;
+			color:#FFF;
+			font-size:100px;
+			}
+		.hand {
+			position:absolute;
+			top:50%;
+			left:50%;
+			margin:20px 0 0 -85px;
+			width:170px;
+			height:220px;
+			}
+	</style>
+</head>
+<body>
+	<button class="button">Uninstall</button>
+	<img src="hand.gif" alt="" class="hand">
+</body>
+</html>
