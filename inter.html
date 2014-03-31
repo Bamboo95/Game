@@ -28,15 +28,9 @@
 			font:80px/1 sans-serif;
 			}
 		.loaded .button {
-			-webkit-animation:press 0.5s 0.6s 1 linear forwards;
+			-webkit-animation:press 0.5s 0.6s steps(1) forwards;
 			}
 		@-webkit-keyframes press {
-			99% {
-				background:
-					url(cross.png) 80px 50% no-repeat,
-					linear-gradient(#D44, #992F2F) no-repeat;
-				margin-top:-100px;
-				}
 			100% {
 				margin-top:-90px;
 				background:#181B21 url(spinner.gif) 80px 50% no-repeat;
